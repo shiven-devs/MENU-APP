@@ -46,6 +46,85 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-hero-in: hero-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-float: float 3.6s ease-in-out infinite;
+  --animate-float-delayed: float 4.4s ease-in-out 0.4s infinite;
+  --animate-scan: scan-line 2.6s ease-in-out infinite;
+  --animate-pop: pop-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fill-bar: fill-bar 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    top: 14%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  50% {
+    top: 82%;
+    opacity: 1;
+  }
+  62%,
+  100% {
+    top: 82%;
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fill-bar {
+  from {
+    width: 8%;
+  }
+  to {
+    width: 92%;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 oklch(0.62 0.14 48 / 0.35);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 8px oklch(0.62 0.14 48 / 0);
+  }
 }
 
 :root {
