@@ -27,7 +27,7 @@ Next.js 16 App Router, TypeScript, Tailwind v4, shadcn/ui, MongoDB + Mongoose, A
 | `/dashboard/settings` | Name, slug, photos, contact |
 | `/r/[slug]` | Public guest menu (no login) |
 
-`?table=` on the public URL is ignored for now. It is reserved if you later add cart + “this order is for table 4.”
+`?table=` on the public URL is ignored for now. It is reserved if you later add cart + “this order is for table 4.(in future versions)”
 
 ## Deploy (Vercel)
 
