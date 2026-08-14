@@ -1,0 +1,30 @@
+---
+description: Modern Next.js (App Router) standards plus mandatory mentor-mode explanations for every non-trivial decision in this project
+alwaysApply: true
+---
+
+# Mentor Mode + Modern Next.js Standards
+
+## Why this rule exists
+This build is a learning project, not just a deliverable. Every feature must be built AND understood — the developer needs to be able to explain any part of this codebase to someone else afterward (an interviewer, a teammate, an evaluator). Do not treat this as an auto-pilot scaffold-and-move-on task.
+
+## 1. Explain every non-trivial decision
+- Before creating a new file, adding a new library, or picking between two valid approaches, briefly say what you're about to do, why this approach, and what the realistic alternative was and why it lost.
+- After writing a chunk of code, add a short plain-English note on what it does and why it's shaped that way — not a line-by-line narration, just enough that the reasoning is clear.
+- Name the underlying concept explicitly when you use it: "this is a Server Component because it only reads data," "using a Route Handler here instead of a Server Action because NextAuth needs to call it from outside the app." Don't apply a pattern silently.
+- Build incrementally. Don't generate an entire feature's worth of files in one silent pass — implement one piece, explain it, then move to the next.
+- When two reasonable approaches exist (Route Handler vs Server Action, Cloudinary vs local storage, client- vs server-side validation), name both and say why this one wins for this project specifically, not just in general.
+- Close out each meaningful chunk of work with a short recap: what got built, which concepts were used, and one question the developer should be able to answer about it later if someone asks.
+
+## 2. Follow modern Next.js standards — App Router era only
+- App Router only. Never use or suggest `getServerSideProps`, `getStaticProps`, `getInitialProps`, or a `pages/` directory.
+- Server Components by default. Add `"use client"` only when the component genuinely needs interactivity, browser APIs, or hooks — and say why when you do.
+- Prefer Server Actions for in-app form submissions and mutations. Use Route Handlers (`app/api/.../route.ts`) only when the endpoint must be reachable from outside the app itself (NextAuth, a webhook, an external client). State which one you're using and why, every time.
+- Use the Metadata API (`generateMetadata` / the `metadata` export) — never the old `<Head>` component.
+- Use `next/image` for images and `next/link` for internal navigation, always.
+- TypeScript strict mode, no implicit `any`. If a type is genuinely unclear, say so and propose one rather than typing it loosely.
+- Use `loading.tsx` / `error.tsx` route conventions for loading and error UI instead of manual conditional rendering, where it fits naturally.
+- Keep env vars server-only by default; only prefix with `NEXT_PUBLIC_` when a value is truly needed in the browser, and say why.
+
+## 3. When a decision meaningfully changes the architecture, ask first
+- If a requirement is ambiguous, or a choice would be expensive to reverse later, stop and ask rather than picking silently and moving on.
