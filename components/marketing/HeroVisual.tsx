@@ -41,9 +41,6 @@ export function HeroVisual() {
           aria-hidden
           className="pointer-events-none absolute inset-x-5 top-[14%] h-0.5 rounded-full bg-primary shadow-[0_0_12px_var(--color-primary)] motion-safe:animate-scan motion-reduce:hidden"
         />
-        <p className="absolute inset-x-0 bottom-3 text-center text-[10px] font-medium tracking-wide text-muted-foreground uppercase">
-          Scan to open
-        </p>
       </div>
     </div>
   );
