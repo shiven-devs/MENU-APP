@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   description:
     "Give every table a QR code and a mobile-first digital menu. Guests browse, then order with staff — no cart or payments in this version.",
   applicationName: "Qrato",
+  // Metadata API (not a Route Handler): these <link rel="icon"> tags are what
+  // the tab uses. Browsers also request /favicon.ico by default; Vercel shows
+  // its triangle when that file is missing or fails to serve.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
