@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { CategoryTabs } from "@/components/menu/CategoryTabs";
 import { ItemCard } from "@/components/menu/ItemCard";
 import { RestaurantHeader } from "@/components/menu/RestaurantHeader";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { getPublicMenu } from "@/lib/menu";
 
 type PublicMenuPageProps = {
@@ -83,6 +84,9 @@ export default async function PublicMenuPage({
           })
         )}
       </main>
+      <footer className="mx-auto mt-10 flex max-w-3xl justify-center px-4">
+        <BrandLogo href="/" size="sm" />
+      </footer>
     </div>
   );
 }

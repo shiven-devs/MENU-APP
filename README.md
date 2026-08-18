@@ -1,4 +1,4 @@
-# Plate — QR digital menus
+# Qrato — QR digital menus
 
 Multi-restaurant app: owners manage a menu in a dashboard; guests scan **one QR per restaurant** and browse (no cart, no payment).
 

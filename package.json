@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed:demo": "node --env-file=.env.local --import tsx scripts/seed-demo.ts"
+    "seed:demo": "node --env-file=.env.local --import tsx scripts/seed-demo.ts",
+    "seed:pine-villa": "node --env-file=.env.local --import tsx scripts/seed-pine-villa.ts",
+    "repair:pine-villa-images": "node --env-file=.env.local --import tsx scripts/repair-pine-villa-images.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

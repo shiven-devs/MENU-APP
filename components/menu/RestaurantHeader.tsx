@@ -33,7 +33,7 @@ export function RestaurantHeader({
             alt=""
             width={64}
             height={64}
-            className="size-16 rounded-xl object-cover ring-1 ring-foreground/10"
+            className="size-16 rounded-xl bg-background object-contain p-1 ring-1 ring-foreground/10"
           />
         ) : (
           <div className="size-16 rounded-xl bg-muted" />

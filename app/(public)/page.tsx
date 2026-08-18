@@ -7,6 +7,7 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { FamilyTableScene } from "@/components/marketing/FamilyTableScene";
 import { HeroVisual } from "@/components/marketing/HeroVisual";
 import { Reveal } from "@/components/marketing/Reveal";
@@ -49,7 +50,7 @@ export default function HomePage() {
     <div className="flex min-h-full flex-1 flex-col bg-[oklch(0.98_0.01_80)]">
       <header className="sticky top-0 z-20 border-b border-foreground/5 bg-[oklch(0.98_0.01_80)/90] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3 sm:px-6 sm:py-4">
-          <p className="text-lg font-semibold tracking-tight">Plate</p>
+          <BrandLogo href="/" priority />
           <nav className="flex items-center gap-1 sm:gap-2">
             <Button variant="ghost" asChild>
               <Link href="/login">Sign in</Link>
@@ -174,6 +175,15 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      <footer className="mt-auto border-t border-foreground/5">
+        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-6 sm:px-6">
+          <BrandLogo href="/" size="sm" />
+          <p className="text-xs text-muted-foreground">
+            Digital menus for modern restaurants
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

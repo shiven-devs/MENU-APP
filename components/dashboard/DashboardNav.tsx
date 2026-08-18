@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { LayoutGrid, LogOut, Settings, UtensilsCrossed } from "lucide-react";
 
 import { logoutAction } from "@/app/actions/auth";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -36,9 +37,7 @@ export function DashboardNav({ restaurantName }: { restaurantName: string }) {
     <aside className="flex w-full flex-col gap-4 border-b bg-sidebar px-4 py-4 md:h-svh md:w-60 md:gap-6 md:sticky md:top-0 md:border-b-0 md:border-r md:py-8">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Plate
-          </p>
+          <BrandLogo href="/dashboard" size="sm" />
           <p className="mt-1 font-semibold">{restaurantName}</p>
         </div>
         {/* Mobile: account action lives top-right, not a full-width block under the tabs. */}

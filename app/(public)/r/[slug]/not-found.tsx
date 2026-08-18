@@ -8,7 +8,7 @@ export default function PublicMenuNotFound() {
         That restaurant link is invalid or the page was moved.
       </p>
       <Link href="/" className="text-primary underline-offset-4 hover:underline">
-        Back to Plate
+        Back to Qrato
       </Link>
     </main>
   );

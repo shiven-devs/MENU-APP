@@ -16,11 +16,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Plate — QR digital menus",
-    template: "%s · Plate",
+    default: "Qrato — QR digital menus",
+    template: "%s · Qrato",
   },
   description:
     "Give every table a QR code and a mobile-first digital menu. Guests browse, then order with staff — no cart or payments in this version.",
+  applicationName: "Qrato",
 };
 
 export default function RootLayout({
