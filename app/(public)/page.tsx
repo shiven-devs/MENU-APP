@@ -50,7 +50,7 @@ export default function HomePage() {
     <div className="flex min-h-full flex-1 flex-col bg-[oklch(0.98_0.01_80)]">
       <header className="sticky top-0 z-20 border-b border-foreground/5 bg-[oklch(0.98_0.01_80)/90] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3 sm:px-6 sm:py-4">
-          <BrandLogo href="/" priority />
+          <BrandLogo href="/" preload />
           <nav className="flex items-center gap-1 sm:gap-2">
             <Button variant="ghost" asChild>
               <Link href="/login">Sign in</Link>
